@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="form-container">
+        <h2>Reserva tu cita</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                {{ form.nombre_cliente }}
+            </div>
+            <div>
+                {{ form.email_cliente }}
+            </div>
+            <div>
+                {{ form.barbero }}
+            </div>
+            <div>
+                {{ form.servicio }}
+            </div>
+            <div>
+                {{ form.fecha }}
+            </div>
+            <div>
+                {{ form.hora }}
+            </div>
+            <button type="submit">Confirmar</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+
+{% for barbero in barberos %}
+
+<div>
+    <h3>{{ barbero.nombre_barbero }}</h3>
+</div>
+
+{% endfor %}
+
+{% endblock %}
